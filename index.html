@@ -27,15 +27,58 @@
       input[type=submit]:hover {
       background-color: #303F9F;
       }
-      div {
+      #container {
       border-radius: 5px;
       background-color: #f2f2f2;
       padding: 20px;
       }
+      .dropbtn {
+      background-color: #303F9F;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 20%;
+      }
+      .dropbtn:hover, .dropbtn:focus {
+      background-color: #2980B9;
+      }
+      .dropdown {
+      position: relative;
+      display: inline-block;
+      }
+      .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      }
+      .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      }
+      .dropdown a:hover {background-color: #ddd;}
+      .show {display: block;}
    </style>
    <body>
-     <h1>Admin Panel</h1>
-      <div>
+      <h1>Admin Panel</h1>
+      <div id ="container">
+         <div class="dropdown">
+            <button onclick="showQuestions()" class="dropbtn">Pre-Selected</button>
+            <div id="myDropdown" class="dropdown-content">
+               <a href="javascript:populateQuestionOne()">Question 1</a>
+               <a href="javascript:populateQuestionTwo()">Question 2</a>
+               <a href="javascript:populateQuestionThree()">Question 3</a>
+               <a href="javascript:populateQuestionFour()">Question 4</a>
+               <a href="javascript:populateQuestionFive()">Question 5</a>
+            </div>
+         </div>
          <form name="questionAnswerForm" action="javascript:publishQuestionAnswer()">
             Question:<br>
             <input type="text" id="question" name="question"><br>

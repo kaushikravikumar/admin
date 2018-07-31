@@ -146,6 +146,76 @@ function resetCounters() {
     });
 }
 
+function showQuestions()
+{
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function populateQuestionOne()
+{
+    document.getElementById('question').value = "The southernmost part of the US is located in which state?";
+    document.getElementById('optionA').value = "Hawaii";
+    document.getElementById('optionB').value = "Texas";
+    document.getElementById('optionC').value = "California";
+    document.getElementById('optionD').value = "Florida";
+    document.getElementById('a_correct').checked = true;
+}
+
+function populateQuestionTwo()
+{
+  document.getElementById('question').value = "Which is the largest freshwater lake in the world?";
+  document.getElementById('optionA').value = "Crater Lake";
+  document.getElementById('optionB').value = "Lake Huron";
+  document.getElementById('optionC').value = "Lake Superior";
+  document.getElementById('optionD').value = "Lake Victoria";
+  document.getElementById('c_correct').checked = true;
+}
+
+function populateQuestionThree()
+{
+  document.getElementById('question').value = "Which U.S. president is on the $100 bill?";
+  document.getElementById('optionA').value = "Abraham Lincoln ";
+  document.getElementById('optionB').value = "Andrew Jackson";
+  document.getElementById('optionC').value = "John Adams";
+  document.getElementById('optionD').value = "Benjamin Franklin";
+  document.getElementById('d_correct').checked = true;
+}
+
+function populateQuestionFour()
+{
+  document.getElementById('question').value = "What company is the world's biggest distributer of toys?";
+  document.getElementById('optionA').value = "McDonalds";
+  document.getElementById('optionB').value = "Hasbro";
+  document.getElementById('optionC').value = "Lego";
+  document.getElementById('optionD').value = "Nerf";
+  document.getElementById('a_correct').checked = true;
+}
+
+function populateQuestionFive()
+{
+  document.getElementById('question').value = "Spinach is high in which mineral?";
+  document.getElementById('optionA').value = "Magnesium";
+  document.getElementById('optionB').value = "Iron";
+  document.getElementById('optionC').value = "Calcium";
+  document.getElementById('optionD').value = "Potassium";
+  document.getElementById('b_correct').checked = true;
+}
+
 /**
  * Helper function to make an HTTP request wrapped in an ES6 Promise.
  *
