@@ -168,7 +168,7 @@ window.onclick = function(event) {
 
 function populateQuestionOne()
 {
-    document.getElementById('question').value = "The southernmost part of the US is located in which state?";
+    document.getElementById('question').value = "Which state has the southernmost place in the U.S?";
     document.getElementById('optionA').value = "Hawaii";
     document.getElementById('optionB').value = "Texas";
     document.getElementById('optionC').value = "California";
@@ -198,7 +198,7 @@ function populateQuestionThree()
 
 function populateQuestionFour()
 {
-  document.getElementById('question').value = "What company is the world's biggest distributer of toys?";
+  document.getElementById('question').value = "What company's the world's biggest distributer of toys?";
   document.getElementById('optionA').value = "McDonalds";
   document.getElementById('optionB').value = "Hasbro";
   document.getElementById('optionC').value = "Lego";
